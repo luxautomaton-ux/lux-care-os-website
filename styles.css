@@ -615,3 +615,87 @@ body {
 @media (min-width: 769px) and (max-width: 1100px) {
   .pricing-grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ─── HOSPITAL BACKGROUND (Hero) ─── */
+.hospital-bg-img {
+  position: absolute;
+  inset: 0;
+  background: url('hospital-bg.png') center center / cover no-repeat;
+  z-index: 0;
+  opacity: 0.18;
+}
+
+/* Ensure existing overlays sit on top */
+#hero .hero-bg .blob-1,
+#hero .hero-bg .blob-2,
+#hero .hero-bg .blob-3,
+#hero .hero-bg .grid-overlay {
+  position: absolute;
+  z-index: 1;
+}
+
+#hero .hero-content,
+#hero .hero-visual {
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── COMPARISON DOCTOR PHOTO ─── */
+.comp-table-outer {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.comp-doctor-photo {
+  flex-shrink: 0;
+  width: 220px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -10px rgba(14, 165, 233, 0.25), 0 4px 16px -4px rgba(0,0,0,0.12);
+  border: 2px solid rgba(14, 165, 233, 0.2);
+  background: #0f172a;
+  align-self: stretch;
+}
+
+.comp-doctor-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.comp-doctor-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: #e2e8f0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.comp-table-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 900px) {
+  .comp-table-outer { flex-direction: column; }
+  .comp-doctor-photo { width: 100%; max-width: 320px; margin: 0 auto; }
+  .comp-doctor-photo img { min-height: 280px; }
+}
