@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lux Care OS — The Future of Clinic Management</title>
+  <meta name="description" content="Lux Care OS is an AI-powered healthcare platform that combines patient management, telehealth, intelligent scheduling, and real-time monitoring into one premium operating system for modern clinics.">
+  <link rel="icon" href="../public/images/Square Black Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="../public/images/Side White Logo.png" alt="Lux Care OS" class="logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#ai">LANA AI</a>
+        <a href="#security">Security</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="nav-cta">Request Demo</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        HIPAA-Ready · AI-Powered · Built for Clinics
+      </div>
+      <h1>The Operating System<br>Your Clinic Deserves</h1>
+      <p class="hero-sub">Lux Care OS unifies patient management, telehealth, AI scheduling, medication tracking, and real-time monitoring — replacing 5+ tools with one premium platform.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">
+          <span>Request a Demo</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#features" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>See How It Works</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">103</span><span class="stat-label">Pages</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Portals</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">91</span><span class="stat-label">Tests</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">A−</span><span class="stat-label">Grade</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="screen-frame">
+        <div class="screen-bar"><span></span><span></span><span></span></div>
+        <img src="../public/images/screenshot-1.png" alt="Lux Care OS Dashboard" class="screen-img">
+      </div>
+      <div class="floating-card card-1">
+        <div class="fc-icon fc-green">✓</div>
+        <div><div class="fc-title">HIPAA Compliant</div><div class="fc-sub">End-to-end encryption</div></div>
+      </div>
+      <div class="floating-card card-2">
+        <div class="fc-icon fc-blue">🧠</div>
+        <div><div class="fc-title">LANA AI Active</div><div class="fc-sub">3 autonomous agents</div></div>
+      </div>
+      <div class="floating-card card-3">
+        <div class="fc-icon fc-violet">♥</div>
+        <div><div class="fc-title">Vitals Streaming</div><div class="fc-sub">Real-time ICU monitor</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Demo Section -->
+  <section id="video-demo">
+    <div class="container">
+      <div class="video-wrapper">
+        <div class="video-frame">
+          <video 
+            id="demo-video"
+            src="Lux Care OS.MP4" 
+            poster="../public/images/screenshot-1.png"
+            playsinline
+            preload="metadata">
+            Your browser does not support the video tag.
+          </video>
+          <button class="video-play-btn" id="video-play-btn" onclick="toggleVideo()" aria-label="Play demo video">
+            <svg class="play-icon" width="48" height="48" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <svg class="pause-icon" width="48" height="48" viewBox="0 0 24 24" fill="white" stroke="none" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="video-label">
+            <span class="video-dot"></span>
+            Product Demo · Lux Care OS
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos / Trust Strip -->
+  <section id="trust">
+    <div class="container">
+      <p class="trust-label">Built With Enterprise-Grade Technology</p>
+      <div class="trust-logos">
+        <div class="trust-item">React + TypeScript</div>
+        <div class="trust-item">Node.js</div>
+        <div class="trust-item">Docker</div>
+        <div class="trust-item">Google Cloud</div>
+        <div class="trust-item">Gemini AI</div>
+        <div class="trust-item">WebRTC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Platform</span>
+        <h2>Everything Your Clinic Needs.<br>Nothing It Doesn't.</h2>
+        <p>Three dedicated portals — Admin, Staff, and Patient — each designed for how that user actually works.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card feature-large">
+          <div class="feature-screen">
+            <img src="../public/images/screenshot-2.png" alt="Patient Management">
+          </div>
+          <div class="feature-body">
+            <div class="feature-icon" style="--accent: #0ea5e9;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Patient Management</h3>
+            <p>Complete patient lifecycle — intake, records, prescriptions, vitals, notes, and family communication. All PHI is masked and encrypted.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #06b6d4;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>
+          </div>
+          <h3>Video Telehealth</h3>
+          <p>Built-in WebRTC video calls with screen share, waiting rooms, and real-time vitals overlay. No Zoom needed.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #8b5cf6;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Smart Scheduling</h3>
+          <p>AI-optimized appointment booking with conflict detection, room allocation, and automated patient reminders.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #10b981;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <h3>ICU Monitoring</h3>
+          <p>Real-time vital signs station with wristband tracking, alert escalation, and multi-display support for nurse stations.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #f59e0b;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+          </div>
+          <h3>Medication Tracking</h3>
+          <p>Full inventory with barcode scanning, low-stock alerts, expiration tracking, and administration logging.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #ef4444;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>Alerts & Escalation</h3>
+          <p>Critical alert system with priority routing, SMS/email escalation, and full audit trail for compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANA AI Section -->
+  <section id="ai">
+    <div class="ai-bg">
+      <div class="ai-glow"></div>
+    </div>
+    <div class="container">
+      <div class="ai-layout">
+        <div class="ai-content">
+          <span class="section-tag tag-light">Artificial Intelligence</span>
+          <h2>Meet LANA.<br>Your Clinic's AI Brain.</h2>
+          <p>LANA (Lux Autonomous Nexus Agent) is a multi-agent AI system built into every layer of Lux Care OS. She doesn't just answer questions — she runs your clinic operations.</p>
+          
+          <div class="ai-agents">
+            <div class="agent-card">
+              <div class="agent-avatar">
+                <img src="../public/images/Lana Profile.jpeg" alt="LANA Executive">
+              </div>
+              <div>
+                <h4>LANA Executive</h4>
+                <p>Manages scheduling conflicts, generates reports, and handles escalation routing.</p>
+              </div>
+            </div>
+            <div class="agent-card">
+              <div class="agent-avatar care">
+                <img src="../public/images/Lana Profile.jpeg" alt="LANA Care">
+              </div>
+              <div>
+                <h4>LANA Care</h4>
+                <p>Monitors patient vitals, flags medication interactions, and automates follow-ups.</p>
+              </div>
+            </div>
+            <div class="agent-card">
+              <div class="agent-avatar chat">
+                <img src="../public/images/Lana Profile.jpeg" alt="LANA Chat">
+              </div>
+              <div>
+                <h4>LANA Chat</h4>
+                <p>Natural-language interface for staff and patients — query records, book appointments, get insights.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ai-visual">
+          <div class="screen-frame dark-frame">
+            <div class="screen-bar dark-bar"><span></span><span></span><span></span></div>
+            <img src="../public/images/screenshot-3.png" alt="LANA AI Interface" class="screen-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Carousel -->
+  <section id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Product Tour</span>
+        <h2>See Every Screen</h2>
+        <p>103 pages across three dedicated portals — designed with clinical precision and consumer-grade polish.</p>
+      </div>
+      <div class="screenshot-grid">
+        <div class="ss-card"><img src="../public/images/screenshot-4.png" alt="Scheduling"><span>Smart Scheduling</span></div>
+        <div class="ss-card"><img src="../public/images/screenshot-5.png" alt="Patients"><span>Patient Records</span></div>
+        <div class="ss-card"><img src="../public/images/screenshot-6.png" alt="Analytics"><span>Analytics Dashboard</span></div>
+        <div class="ss-card"><img src="../public/images/screenshot-7.png" alt="Medications"><span>Medication Tracking</span></div>
+        <div class="ss-card"><img src="../public/images/screenshot-8.png" alt="Telehealth"><span>Video Telehealth</span></div>
+        <div class="ss-card"><img src="../public/images/screenshot-9.png" alt="ICU Station"><span>ICU Monitor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitive Comparison Section -->
+  <section id="comparison">
+    <div class="container">
+
+      <!-- Header row -->
+      <div class="comp-header">
+        <div class="comp-header-left">
+          <span class="section-tag">Competitive Analysis</span>
+          <h2>How Lux Care OS<br>Stacks Up</h2>
+          <p class="comp-subtitle">Modern clinic operations, built-in AI, and customer-owned cloud deployment for forward-thinking clinics.</p>
+        </div>
+        <div class="comp-pilot-badge">
+          <div class="cpb-inner">
+            <div class="cpb-rocket">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M4.5 16.5c-1.5 1.5-1.5 4 0 4s2.5-2.5 4-4L12 13l-2.5-2.5-5 6zM12 13l5-5M15 4l5 5-1.5 1.5M9.5 14.5 4 20"/><path d="M20 4c0 0-5 1-8 4s-4 8-4 8"/></svg>
+            </div>
+            <div class="cpb-text">
+              <div class="cpb-grade">A<span class="cpb-minus">-</span> PILOT-READY</div>
+              <div class="cpb-readiness">~91% Weighted Readiness</div>
+              <div class="cpb-sub">91 Automated Tests &nbsp;·&nbsp; Green CI ✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th class="ct-label-col"></th>
+              <th class="ct-lux">LUX CARE OS</th>
+              <th>Epic</th>
+              <th>athenahealth</th>
+              <th>DrChrono /<br>Tebra</th>
+              <th>SimplePractice /<br>Jane</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ct-row-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Best fit
+              </td>
+              <td class="ct-lux ct-val">Specialty &amp; modern clinics</td>
+              <td class="ct-val">Large enterprises</td>
+              <td class="ct-val">Mid to large practices</td>
+              <td class="ct-val">SMB / practice tools</td>
+              <td class="ct-val">Solo &amp; wellness practices</td>
+            </tr>
+            <tr>
+              <td class="ct-row-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                Built-in AI assistant
+              </td>
+              <td class="ct-lux ct-win">Yes — LANA</td>
+              <td class="ct-val ct-weak">Limited</td>
+              <td class="ct-val ct-weak">Limited</td>
+              <td class="ct-val ct-weak">Limited</td>
+              <td class="ct-val ct-no">No</td>
+            </tr>
+            <tr>
+              <td class="ct-row-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M17 2 7 12"/><path d="m7 2 10 10"/></svg>
+                Built-in telehealth
+              </td>
+              <td class="ct-lux ct-win">Yes</td>
+              <td class="ct-val">Yes</td>
+              <td class="ct-val">Yes</td>
+              <td class="ct-val">Yes</td>
+              <td class="ct-val">Yes</td>
+            </tr>
+            <tr>
+              <td class="ct-row-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                Customer-owned cloud
+              </td>
+              <td class="ct-lux ct-win">Yes</td>
+              <td class="ct-val ct-no">No</td>
+              <td class="ct-val ct-no">No</td>
+              <td class="ct-val ct-no">No</td>
+              <td class="ct-val ct-no">No</td>
+            </tr>
+            <tr>
+              <td class="ct-row-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>
+                Modern UX &amp; workflow flexibility
+              </td>
+              <td class="ct-lux ct-win">Strong</td>
+              <td class="ct-val ct-weak">Moderate</td>
+              <td class="ct-val ct-weak">Moderate</td>
+              <td class="ct-val">Strong</td>
+              <td class="ct-val">Strong</td>
+            </tr>
+            <tr>
+              <td class="ct-row-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                White-glove setup &amp; support
+              </td>
+              <td class="ct-lux ct-win">High</td>
+              <td class="ct-val ct-weak">Standard</td>
+              <td class="ct-val ct-weak">Standard</td>
+              <td class="ct-val ct-weak">Standard</td>
+              <td class="ct-val ct-no">Self-service focused</td>
+            </tr>
+            <tr>
+              <td class="ct-row-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                Enterprise interoperability
+              </td>
+              <td class="ct-lux ct-win">Strong</td>
+              <td class="ct-val ct-star">Very Strong</td>
+              <td class="ct-val ct-star">Very Strong</td>
+              <td class="ct-val ct-weak">Moderate</td>
+              <td class="ct-val ct-no">Limited</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Where We Win + Best Fit -->
+      <div class="comp-bottom">
+        <div class="comp-wins">
+          <div class="comp-wins-header">
+            <span class="cw-trophy">🏆</span>
+            WHERE LUX CARE OS WINS
+          </div>
+          <div class="comp-wins-grid">
+            <div class="cw-item">
+              <span class="cw-icon">🧠</span>
+              <span>AI-first clinic workflows</span>
+            </div>
+            <div class="cw-item">
+              <span class="cw-icon">☁️</span>
+              <span>Customer-owned Google Cloud model</span>
+            </div>
+            <div class="cw-item">
+              <span class="cw-icon">🎧</span>
+              <span>White-glove pilot launch support</span>
+            </div>
+            <div class="cw-item">
+              <span class="cw-icon">⭐</span>
+              <span>Modern operations experience for specialty clinics</span>
+            </div>
+          </div>
+        </div>
+        <div class="comp-bestfit">
+          <div class="comp-bestfit-header">
+            <span>👤</span> BEST FIT
+          </div>
+          <p>Ideal for specialty clinics, post-op recovery, med spas, concierge care, and modern design-partner pilots.</p>
+        </div>
+      </div>
+
+      <!-- Proof Stats Bar -->
+      <div class="comp-proof-bar">
+        <div class="cpb-stat">
+          <span class="cpb-stat-icon">&lt;/&gt;</span>
+          ~80K LOC
+        </div>
+        <div class="cpb-divider"></div>
+        <div class="cpb-stat">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          103 Pages
+        </div>
+        <div class="cpb-divider"></div>
+        <div class="cpb-stat">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          103 API Routes
+        </div>
+        <div class="cpb-divider"></div>
+        <div class="cpb-stat">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          9 Legal Docs
+        </div>
+        <div class="cpb-divider"></div>
+        <div class="cpb-stat">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Docker + CI Verified
+        </div>
+        <div class="cpb-note">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Based on verified code inspection, 91 passing tests, and green CI.
+          &nbsp;<em>Not</em> positioned as an Epic replacement. Best for modern, pilot-ready clinic operations.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Security Section -->
+  <section id="security">
+    <div class="container">
+      <div class="security-layout">
+        <div class="security-content">
+          <span class="section-tag">Compliance</span>
+          <h2>HIPAA-Ready.<br>Not HIPAA-Hopeful.</h2>
+          <p>Every line of code was written with PHI protection in mind. We don't bolt on security — it's the foundation.</p>
+          
+          <div class="security-grid">
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>Business Associate Agreement</strong>
+                <span>Full BAA template included</span>
+              </div>
+            </div>
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>HMAC Audit Logging</strong>
+                <span>Tamper-evident audit trail</span>
+              </div>
+            </div>
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>PHI Masking</strong>
+                <span>SSN, MRN, DOB auto-masked</span>
+              </div>
+            </div>
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>Content Security Policy</strong>
+                <span>Helmet CSP, XSS prevention</span>
+              </div>
+            </div>
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>Role-Based Access</strong>
+                <span>Admin, Staff, Patient roles</span>
+              </div>
+            </div>
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>Encrypted Database</strong>
+                <span>AES-256 at rest</span>
+              </div>
+            </div>
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>Security Risk Assessment</strong>
+                <span>HIPAA SRA documented</span>
+              </div>
+            </div>
+            <div class="sec-item">
+              <div class="sec-check">✓</div>
+              <div>
+                <strong>Incident Response Plan</strong>
+                <span>72-hour breach protocol</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="security-visual">
+          <div class="shield-graphic">
+            <div class="shield-ring ring-1"></div>
+            <div class="shield-ring ring-2"></div>
+            <div class="shield-ring ring-3"></div>
+            <div class="shield-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4" stroke="#10b981" stroke-width="2"/></svg>
+            </div>
+          </div>
+          <div class="security-stat">
+            <span class="ss-grade">A</span>
+            <span class="ss-label">Security Grade</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2>Simple, Transparent Pricing<br>for Modern Clinic Operations</h2>
+        <p>You own your cloud. We set up and support the system. You stay in control of your data.</p>
+      </div>
+
+      <!-- 4-Tier Pricing Grid -->
+      <div class="pricing-grid-4">
+        
+        <!-- Tier 1: Design Partner Pilot -->
+        <div class="price-card price-featured">
+          <div class="price-badge badge-featured">Design Partner Pilot</div>
+          <p class="price-tagline">Best for first clinics ready to help shape the platform</p>
+          <div class="price-amount">
+            <span class="price-currency">$</span>
+            <span class="price-number">1,500</span>
+            <span class="price-period">setup</span>
+          </div>
+          <div class="price-monthly">
+            <span>$499</span>/month after 60-day pilot
+          </div>
+          <ul class="price-features">
+            <li>Lux Care OS full setup</li>
+            <li>Lux Care Manager onboarding</li>
+            <li>LANA AI assistant workflow setup</li>
+            <li>Patient portal configuration</li>
+            <li>Scheduling &amp; telehealth setup</li>
+            <li>Google Cloud setup guidance</li>
+            <li>Legal/pilot checklist support</li>
+            <li>Staff walkthrough</li>
+            <li>Weekly check-ins during pilot</li>
+            <li>Feedback review &amp; case study</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">Apply for Pilot</a>
+          <p class="price-note">Limited spots · 60-day design partnership</p>
+          <div class="price-best-for">
+            <strong>Best for:</strong> wellness clinics, post-op recovery homes, med spas, concierge clinics, specialty outpatient practices
+          </div>
+        </div>
+
+        <!-- Tier 2: Starter Cloud -->
+        <div class="price-card">
+          <div class="price-badge">Starter Cloud</div>
+          <p class="price-tagline">Best for small clinics that want a clean operations system</p>
+          <div class="price-amount">
+            <span class="price-currency">$</span>
+            <span class="price-number">2,500</span>
+            <span class="price-period">–$5K setup</span>
+          </div>
+          <div class="price-monthly">
+            <span>$299–$750</span>/month support
+          </div>
+          <ul class="price-features">
+            <li>Clinic operations dashboard</li>
+            <li>Patient intake workflows</li>
+            <li>Staff/admin portal</li>
+            <li>Scheduling workflows</li>
+            <li>Document upload &amp; storage</li>
+            <li>Basic telehealth support</li>
+            <li>LANA assistant setup</li>
+            <li>Google Cloud deployment support</li>
+            <li>Monthly system check-in</li>
+            <li>Basic support</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">Get Started</a>
+          <p class="price-note">Customer-owned Google Cloud</p>
+          <div class="price-best-for">
+            <strong>Best for:</strong> solo practices, small wellness clinics, mobile health providers, cash-pay practices
+          </div>
+        </div>
+
+        <!-- Tier 3: Pro Clinic -->
+        <div class="price-card price-pro">
+          <div class="price-badge badge-pro">Pro Clinic</div>
+          <p class="price-tagline">Best for clinics that need deeper setup and stronger support</p>
+          <div class="price-amount">
+            <span class="price-currency">$</span>
+            <span class="price-number">7,500</span>
+            <span class="price-period">–$15K setup</span>
+          </div>
+          <div class="price-monthly">
+            <span>$750–$2,000</span>/month support
+          </div>
+          <ul class="price-features">
+            <li>Everything in Starter Cloud</li>
+            <li>Advanced onboarding</li>
+            <li>Custom workflow mapping</li>
+            <li>Multi-provider setup</li>
+            <li>Multi-location guidance</li>
+            <li>Advanced dashboards</li>
+            <li>Deployment runbook support</li>
+            <li>Staff training session</li>
+            <li>ROI tracking</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">Contact Sales</a>
+          <p class="price-note">Dedicated customer success</p>
+          <div class="price-best-for">
+            <strong>Best for:</strong> growing clinics, multi-provider practices, post-op recovery businesses, specialty clinics
+          </div>
+        </div>
+
+        <!-- Tier 4: Private Appliance -->
+        <div class="price-card">
+          <div class="price-badge">Private Appliance</div>
+          <p class="price-tagline">Best for organizations that need a dedicated private environment</p>
+          <div class="price-amount">
+            <span class="price-currency">$</span>
+            <span class="price-number">15K</span>
+            <span class="price-period">–$35K+ setup</span>
+          </div>
+          <div class="price-monthly">
+            <span>$1,500–$5,000</span>/month support
+          </div>
+          <ul class="price-features">
+            <li>Dedicated private deployment</li>
+            <li>Advanced infrastructure setup</li>
+            <li>Custom workflow design</li>
+            <li>Private AI operations planning</li>
+            <li>Premium onboarding</li>
+            <li>Deployment validation</li>
+            <li>Backup &amp; restore planning</li>
+            <li>Custom reporting</li>
+            <li>Priority response support</li>
+            <li>Ongoing optimization</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">Talk to Us</a>
+          <p class="price-note">Enterprise-grade private environment</p>
+          <div class="price-best-for">
+            <strong>Best for:</strong> private healthcare groups, specialty operators, high-touch clinics
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cloud Cost Callout -->
+      <div class="cloud-cost-banner">
+        <div class="ccb-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+          </svg>
+        </div>
+        <div class="ccb-content">
+          <h3>Customer-Owned Google Cloud</h3>
+          <p>Your clinic owns the Google Cloud account, controls billing, and activates the Google Cloud BAA. We configure and deploy — you stay in control of your environment.</p>
+          <div class="ccb-estimate">
+            <div class="ccb-price">
+              <span class="ccb-amount">$50–$150</span>
+              <span class="ccb-period">/month typical early pilot range</span>
+            </div>
+            <span class="ccb-note">Actual cost depends on traffic, storage, backups, region, compute size, and telehealth usage.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI Section -->
+  <section id="roi">
+    <div class="container">
+      <div class="roi-banner">
+        <div class="roi-content">
+          <span class="section-tag tag-light">ROI</span>
+          <h2>The Math Is Simple</h2>
+          <p>A custom healthcare operations platform can cost $80,000–$250,000+ to build from scratch. Lux Care OS gives clinics a faster path.</p>
+        </div>
+        <div class="roi-numbers">
+          <div class="roi-item">
+            <span class="roi-num">$1,500</span>
+            <span class="roi-label">Pilot setup vs $80K+ custom build</span>
+          </div>
+          <div class="roi-item">
+            <span class="roi-num">$499</span>
+            <span class="roi-label">/month after pilot</span>
+          </div>
+          <div class="roi-item">
+            <span class="roi-num">60</span>
+            <span class="roi-label">day pilot to prove value</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes It Different -->
+  <section id="differentiators">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Lux Care OS</span>
+        <h2>What Makes the Pricing Different</h2>
+        <p>Most platforms charge like software vendors. We built something better.</p>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon">☁️</div>
+          <h4>Customer-Owned Cloud</h4>
+          <p>Your Google Cloud. Your billing. Your data. Always.</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">🚀</div>
+          <h4>Lean Setup Cost</h4>
+          <p>Start at $1,500 — not $80K+ for custom builds.</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">🧠</div>
+          <h4>AI-Assisted Workflows</h4>
+          <p>LANA AI handles scheduling, triage, and operations.</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">🤝</div>
+          <h4>White-Glove Pilot</h4>
+          <p>Weekly check-ins. Staff training. We launch together.</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">🔓</div>
+          <h4>No Lock-In</h4>
+          <p>You own your cloud. Leave anytime with your data.</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">⚡</div>
+          <h4>Launch Fast</h4>
+          <p>Designed to go live in days — not months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Note -->
+  <section id="compliance-note">
+    <div class="container">
+      <div class="compliance-banner">
+        <div class="compliance-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4" stroke="#10b981" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="compliance-content">
+          <h3>Compliance Note</h3>
+          <p>Lux Care OS is built with HIPAA-aligned safeguards including role-based access, audit logging, encryption-focused architecture, and PHI-conscious workflows. Real PHI should only be used after legal documents are reviewed, a BAA is signed, Google Cloud BAA is activated, security risk review is completed, and the deployment checklist is approved.</p>
+          <p class="compliance-disclaimer">Lux Care OS is not marketed as an Epic replacement, ONC-certified EHR, or FDA-cleared medical device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-content">
+          <h2>Ready to Launch Smarter<br>Clinic Operations?</h2>
+          <p>Start with the <strong>Design Partner Pilot</strong> and help shape the future of Lux Care OS. Book a discovery call today.</p>
+          <div class="cta-price-recap">
+            <div class="cta-price-item">
+              <span class="cta-label">Pilot Setup</span>
+              <span class="cta-value">$1,500</span>
+            </div>
+            <div class="cta-price-item">
+              <span class="cta-label">Monthly Support</span>
+              <span class="cta-value">$499/mo</span>
+            </div>
+          </div>
+          <div class="contact-points">
+            <div class="cp-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>60-day pilot to prove value</span>
+            </div>
+            <div class="cp-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>You own your cloud and your data</span>
+            </div>
+            <div class="cp-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>White-glove setup &amp; weekly check-ins</span>
+            </div>
+            <div class="cp-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Launch in days — not months</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <h3 class="form-title">Book a Discovery Call</h3>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Dr. Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" placeholder="jane@yourclinic.com" required>
+          </div>
+          <div class="form-group">
+            <label for="clinic">Clinic Name</label>
+            <input type="text" id="clinic" placeholder="Sunrise Recovery Center">
+          </div>
+          <div class="form-group">
+            <label for="type">Clinic Type</label>
+            <select id="type">
+              <option value="">Select type...</option>
+              <option>Wellness Clinic</option>
+              <option>Post-Op Recovery Home</option>
+              <option>Med Spa</option>
+              <option>Concierge Clinic</option>
+              <option>Specialty Outpatient</option>
+              <option>Solo Practice</option>
+              <option>Multi-Provider Group</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="size">Clinic Size</label>
+            <select id="size">
+              <option value="">Select size...</option>
+              <option>1-5 providers</option>
+              <option>6-15 providers</option>
+              <option>16-30 providers</option>
+              <option>30+ providers</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Request Demo</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../public/images/Side White Logo.png" alt="Lux Care OS" class="footer-logo">
+          <p>The operating system modern clinics deserve. Built by Lux Automaton LLC.</p>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#ai">LANA AI</a>
+            <a href="#screenshots">Product Tour</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+          <div class="fl-col">
+            <h4>Compliance</h4>
+            <a href="#">HIPAA Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">BAA Template</a>
+          </div>
+          <div class="fl-col">
+            <h4>Company</h4>
+            <a href="#contact">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lux Automaton LLC. All rights reserved.</p>
+        <p>Made with care in Oregon</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelector('.nav-links')?.classList.remove('open');
+        }
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.feature-card, .sec-item, .agent-card, .ss-card, .roi-item, .price-card, .diff-card').forEach(el => {
+      el.classList.add('animate-in');
+      observer.observe(el);
+    });
+
+    // Video toggle
+    function toggleVideo() {
+      const video = document.getElementById('demo-video');
+      const btn = document.getElementById('video-play-btn');
+      const playIcon = btn.querySelector('.play-icon');
+      const pauseIcon = btn.querySelector('.pause-icon');
+      if (video.paused) {
+        video.play();
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+        btn.classList.add('playing');
+      } else {
+        video.pause();
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        btn.classList.remove('playing');
+      }
+    }
+
+    // Video resets to beginning when it ends
+    const videoEl = document.getElementById('demo-video');
+    if (videoEl) {
+      videoEl.addEventListener('ended', () => {
+        const btn = document.getElementById('video-play-btn');
+        btn.querySelector('.play-icon').style.display = 'block';
+        btn.querySelector('.pause-icon').style.display = 'none';
+        btn.classList.remove('playing');
+      });
+    }
+
+    // Form handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.innerHTML = '<span>✓ Request Sent!</span>';
+      btn.style.background = '#10b981';
+      setTimeout(() => {
+        btn.innerHTML = '<span>Request Demo</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        btn.style.background = '';
+      }, 3000);
+    }
+
+    // Counter animation
+    const counters = document.querySelectorAll('.stat-num, .roi-num');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+  </script>
+</body>
+</html>
