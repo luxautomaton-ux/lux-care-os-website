@@ -40,7 +40,7 @@
   --gradient-dark: linear-gradient(135deg, var(--slate-900) 0%, #1a1a2e 100%);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -303,57 +303,7 @@ body {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* ── Video Demo: Mobile fixes ── */
-@media (max-width: 768px) {
-  #video-demo {
-    margin-top: -20px;
-    padding: 0 0 40px;
-  }
-  .video-wrapper {
-    padding: 0 16px;
-  }
-  .video-frame {
-    border-radius: 12px;
-    aspect-ratio: 16 / 9;
-  }
-  .video-play-btn {
-    width: 52px;
-    height: 52px;
-  }
-  .video-play-btn svg {
-    width: 28px;
-    height: 28px;
-  }
-  .video-label {
-    bottom: 10px;
-    left: 10px;
-    padding: 6px 12px;
-    font-size: 10px;
-  }
-  .video-dot {
-    width: 6px;
-    height: 6px;
-  }
-  .demo-card-frame {
-    min-height: 200px !important;
-    border-radius: 12px;
-  }
-  .demo-play-ring {
-    width: 60px !important;
-    height: 60px !important;
-  }
-  .demo-play-ring svg {
-    width: 32px !important;
-    height: 32px !important;
-  }
-  .demo-card-label {
-    font-size: 11px !important;
-  }
-  .demo-card-btn {
-    font-size: 13px !important;
-    padding: 11px 20px !important;
-  }
-}
+
 
 /* ─── SECTIONS ─── */
 .section-header { text-align: center; margin-bottom: 56px; }
@@ -854,4 +804,57 @@ body {
 .demo-card-btn:hover {
   background: var(--sky-dark);
   transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════
+   MOBILE RESPONSIVE FIXES (max-width: 768px)
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Container gets breathing room */
+  .container { padding: 0 16px; }
+
+  /* ── Hero ── */
+  #hero {
+    padding: 100px 16px 60px;
+    overflow: hidden;
+  }
+
+  /* Shrink blobs so they don't cause scroll */
+  .blob-1 { width: 200px; height: 200px; top: -60px; right: -60px; }
+  .blob-2 { width: 180px; height: 180px; bottom: -60px; left: -60px; }
+  .blob-3 { width: 150px; height: 150px; }
+
+  /* Hide floating cards — positioned at -60px/-70px, break layout on mobile */
+  .floating-card { display: none; }
+
+  /* Hero visual stays inside viewport */
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .screen-frame { border-radius: 12px; }
+  .hero-sub { font-size: 15px; }
+  .hero-stats { gap: 12px; }
+  .stat-num { font-size: 22px; }
+  .stat-divider { height: 24px; }
+  .hero-actions { gap: 12px; }
+  .btn { padding: 12px 20px; font-size: 14px; }
+
+  /* ── Video / Demo Card ── */
+  #video-demo { margin-top: -20px; padding: 0 0 40px; }
+  .video-wrapper { padding: 0 16px; }
+  .video-frame { border-radius: 12px; }
+  .video-play-btn { width: 52px; height: 52px; }
+  .video-play-btn svg { width: 28px; height: 28px; }
+  .video-label { bottom: 10px; left: 10px; padding: 6px 12px; font-size: 10px; }
+  .video-dot { width: 6px; height: 6px; }
+
+  /* Demo card */
+  .demo-card-frame { min-height: 200px; border-radius: 12px; }
+  .demo-play-ring { width: 60px; height: 60px; }
+  .demo-play-ring svg { width: 32px; height: 32px; }
+  .demo-card-label { font-size: 11px; }
+  .demo-card-btn { font-size: 13px; padding: 11px 20px; }
 }
