@@ -860,15 +860,31 @@ body {
 }
 
 /* ── YouTube Embed ── */
+/* Outer wrapper: positions the label badge */
+.yt-outer {
+  position: relative;
+  width: 100%;
+}
+
+/* Clip top ~56px to hide YouTube channel/title bar */
+.yt-clip {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
+  background: #000;
+  /* Mask the top title bar YouTube shows before play */
+  clip-path: inset(0 0 0 0 round 16px);
+}
+
+/* 16:9 ratio container */
 .yt-frame-wrap {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 24px 60px -12px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
   background: #000;
+  /* Pull iframe up to hide title bar, compensate with negative top */
+  margin-top: -1px;
 }
 
 .yt-frame-wrap iframe {
@@ -877,14 +893,26 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 16px;
+  display: block;
+}
+
+/* Label badge sits below the embed, not absolute */
+.yt-outer .video-label {
+  position: relative;
+  display: inline-flex;
+  margin-top: 12px;
+  bottom: auto;
+  left: auto;
 }
 
 @media (max-width: 768px) {
-  .yt-frame-wrap {
+  .yt-clip {
     border-radius: 10px;
+    clip-path: inset(0 0 0 0 round 10px);
   }
-  .yt-frame-wrap iframe {
-    border-radius: 10px;
+  .yt-outer .video-label {
+    font-size: 10px;
+    padding: 6px 12px;
+    margin-top: 8px;
   }
 }
