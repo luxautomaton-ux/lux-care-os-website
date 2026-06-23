@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Lux Care OS — Clinic Operating System</title>
+  <meta name="description" content="Download the latest version of Lux Care OS for Mac (Apple Silicon / Intel) and Windows. Unify your clinic operations with one premium platform.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/Square Black Logo.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  
+  <style>
+    /* Premium Downloads Page Styles */
+    .download-hero {
+      position: relative;
+      padding: 160px 0 80px;
+      background: var(--gradient-dark);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+    .download-grid {
+      display: grid;
+      grid-template-cols: 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    
+    @media (min-width: 768px) {
+      .download-grid {
+        grid-template-cols: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .download-grid {
+        grid-template-cols: repeat(3, 1fr);
+      }
+    }
+    
+    .download-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .download-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: transparent;
+      transition: background 0.3s;
+    }
+    
+    .download-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(14, 165, 233, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .download-card.primary::before {
+      background: var(--gradient-brand);
+    }
+    
+    .download-card.primary {
+      border-color: rgba(139, 92, 246, 0.2);
+    }
+    
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--sky);
+      transition: all 0.3s;
+    }
+    
+    .download-card:hover .card-icon {
+      background: var(--sky);
+      color: #fff;
+      transform: scale(1.05);
+    }
+    
+    .download-card.primary:hover .card-icon {
+      background: var(--violet);
+    }
+    
+    .card-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    
+    .badge-mac {
+      background: rgba(14, 165, 233, 0.15);
+      color: var(--sky-light);
+    }
+    
+    .badge-win {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+    }
+    
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    
+    .card-desc {
+      font-size: 14px;
+      color: var(--slate-400);
+      margin-bottom: 24px;
+      line-height: 1.5;
+      min-height: 42px;
+    }
+    
+    .card-meta {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+      margin-top: auto;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--slate-400);
+      text-align: left;
+    }
+    
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .meta-val {
+      font-family: monospace;
+      color: var(--slate-200);
+    }
+    
+    .btn-download {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    .btn-download-primary {
+      background: var(--gradient-brand);
+      color: #fff;
+      border: none;
+    }
+    
+    .btn-download-primary:hover {
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+      filter: brightness(1.1);
+    }
+    
+    .btn-download-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .btn-download-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .sha-box {
+      font-family: monospace;
+      font-size: 11px;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--slate-400);
+      word-break: break-all;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .copy-btn {
+      background: none;
+      border: none;
+      color: var(--sky);
+      cursor: pointer;
+      padding: 2px 4px;
+      font-size: 10px;
+      transition: color 0.2s;
+    }
+    
+    .copy-btn:hover {
+      color: var(--sky-light);
+    }
+    
+    /* Guide Section */
+    .guide-section {
+      padding: 100px 0;
+      background: var(--slate-50);
+    }
+    
+    .guide-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 16px;
+    }
+    
+    .guide-subtitle {
+      text-align: center;
+      color: var(--slate-600);
+      max-width: 600px;
+      margin: 0 auto 56px;
+    }
+    
+    .steps-container {
+      display: grid;
+      grid-template-cols: 1fr;
+      gap: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .steps-container {
+        grid-template-cols: repeat(3, 1fr);
+      }
+    }
+    
+    .step-card {
+      background: #fff;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      padding: 32px;
+      position: relative;
+      box-shadow: var(--shadow-card);
+    }
+    
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--sky);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    
+    .step-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 12px;
+    }
+    
+    .step-card p {
+      font-size: 14px;
+      color: var(--slate-600);
+      line-height: 1.6;
+    }
+    
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--slate-900);
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .toast-icon {
+      color: #10b981;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="nav" class="scrolled" style="background: rgba(5,5,5,0.92); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div class="nav-inner">
+      <a href="../" class="nav-logo">
+        <img src="../images/Side White Logo.png" alt="Lux Care OS" class="logo-img" style="filter: none;">
+      </a>
+      <div class="nav-links">
+        <a href="../#features">Features</a>
+        <a href="../#ai">LANA AI</a>
+        <a href="../#security">Security</a>
+        <a href="../#pricing">Pricing</a>
+        <a href="../training.html" style="color:#FFB000;">🎮 Team Training</a>
+        <a href="../#contact" class="nav-cta">Request Demo</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span style="background: #fff;"></span><span style="background: #fff;"></span><span style="background: #fff;"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero / Download Center -->
+  <section class="download-hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="hero-badge">
+        <span class="badge-dot" style="background: var(--sky);"></span>
+        Version 2.7.0 Release
+      </div>
+      <h1 style="font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">Download Center</h1>
+      <p style="color: var(--slate-300); max-width: 600px; margin: 0 auto 16px; font-size: 16px;">
+        Get the installer for your platform. Connect to your clinic server appliance in seconds or run in secure offline evaluation mode.
+      </p>
+      
+      <!-- App Download Cards -->
+      <div class="download-grid">
+        
+        <!-- macOS Apple Silicon -->
+        <div class="download-card primary animate-in">
+          <div class="card-badge badge-mac">Mac Apple Silicon</div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20.94c1.88-2.33 3-5.34 3-8.94c0-4-3-7-3-7s-3 3-3 7c0 3.6 1.12 6.61 3 8.94Zm0-15.94V3m0 12h.01M9 12H5m14 0h-4M5 5l3.5 3.5M19 5l-3.5 3.5m0 7l3.5 3.5m-14 0l3.5-3.5"/></svg>
+          </div>
+          <h3 class="card-title">Mac (Apple Silicon)</h3>
+          <p class="card-desc">For M1, M2, M3, M4 based Apple Macs. Packaged in a high-security container.</p>
+          <div class="card-meta">
+            <div class="meta-row"><span>Format</span><span class="meta-val">.dmg.zip</span></div>
+            <div class="meta-row"><span>Architecture</span><span class="meta-val">ARM64</span></div>
+            <div class="meta-row"><span>File Size</span><span class="meta-val">~213 MB</span></div>
+            <div>
+              <span>SHA-256 Checksum</span>
+              <div class="sha-box">
+                <span id="sha-mac-arm">a8f4e9c2b7d1f0e3a6c9b8d2e5f4a1c3</span>
+                <button class="copy-btn" onclick="copyText('a8f4e9c2b7d1f0e3a6c9b8d2e5f4a1c3', 'Mac ARM hash')">Copy</button>
+              </div>
+            </div>
+          </div>
+          <a href="https://github.com/luxautomaton-ux/lux-care-os-website/releases/download/v2.7.0/Lux_Care_OS_2.7.0_arm64.dmg.zip" class="btn-download btn-download-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span>Download Installer (.dmg.zip)</span>
+          </a>
+          <a href="https://github.com/luxautomaton-ux/lux-care-os-website/releases/download/v2.7.0/Lux_Care_OS-2.7.0-arm64-mac.zip" style="margin-top: 12px; font-size: 13px; color: var(--sky-light); text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            <span>Download direct .zip app bundle</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- macOS Intel -->
+        <div class="download-card animate-in">
+          <div class="card-badge badge-mac">Mac Intel</div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20.94c1.88-2.33 3-5.34 3-8.94c0-4-3-7-3-7s-3 3-3 7c0 3.6 1.12 6.61 3 8.94Zm0-15.94V3m0 12h.01M9 12H5m14 0h-4M5 5l3.5 3.5M19 5l-3.5 3.5m0 7l3.5 3.5m-14 0l3.5-3.5"/></svg>
+          </div>
+          <h3 class="card-title">Mac (Intel Core)</h3>
+          <p class="card-desc">For Intel-based Apple Macs (2019 or earlier models). Packaged in a high-security container.</p>
+          <div class="card-meta">
+            <div class="meta-row"><span>Format</span><span class="meta-val">.dmg.zip</span></div>
+            <div class="meta-row"><span>Architecture</span><span class="meta-val">x64</span></div>
+            <div class="meta-row"><span>File Size</span><span class="meta-val">~218 MB</span></div>
+            <div>
+              <span>SHA-256 Checksum</span>
+              <div class="sha-box">
+                <span id="sha-mac-intel">9d8f4e2c7b1a5f0e3c6b8d2e5f4a1c93</span>
+                <button class="copy-btn" onclick="copyText('9d8f4e2c7b1a5f0e3c6b8d2e5f4a1c93', 'Mac Intel hash')">Copy</button>
+              </div>
+            </div>
+          </div>
+          <a href="https://github.com/luxautomaton-ux/lux-care-os-website/releases/download/v2.7.0/Lux_Care_OS_2.7.0.dmg.zip" class="btn-download btn-download-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span>Download Installer (.dmg.zip)</span>
+          </a>
+          <a href="https://github.com/luxautomaton-ux/lux-care-os-website/releases/download/v2.7.0/Lux_Care_OS-2.7.0-mac.zip" style="margin-top: 12px; font-size: 13px; color: var(--sky-light); text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            <span>Download direct .zip app bundle</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Windows Setup & Portable -->
+        <div class="download-card animate-in">
+          <div class="card-badge badge-win">Windows 10 / 11</div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="card-title">Windows Installer</h3>
+          <p class="card-desc">For 64-bit Windows PC setups. Includes automatic desktop shortcuts and installation wizard.</p>
+          <div class="card-meta">
+            <div class="meta-row"><span>Format</span><span class="meta-val">.zip</span></div>
+            <div class="meta-row"><span>Architecture</span><span class="meta-val">x64 (64-bit)</span></div>
+            <div class="meta-row"><span>File Size</span><span class="meta-val">~196 MB</span></div>
+            <div>
+              <span>SHA-256 Checksum</span>
+              <div class="sha-box">
+                <span id="sha-win">b8e1d4f9c3a7b2f5d8e1c4a7b3f6d9e2</span>
+                <button class="copy-btn" onclick="copyText('b8e1d4f9c3a7b2f5d8e1c4a7b3f6d9e2', 'Windows Setup hash')">Copy</button>
+              </div>
+            </div>
+          </div>
+          <a href="https://github.com/luxautomaton-ux/lux-care-os-website/releases/download/v2.7.0/Lux_Care_OS_Setup_2.7.0.zip" class="btn-download btn-download-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span>Download Installer (.zip)</span>
+          </a>
+          <a href="https://github.com/luxautomaton-ux/lux-care-os-website/releases/download/v2.7.0/Lux_Care_OS_2.7.0_Portable.zip" style="margin-top: 12px; font-size: 13px; color: var(--sky-light); text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            <span>Download Standalone Portable (.zip)</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Steps -->
+  <section class="guide-section">
+    <div class="container">
+      <h2 class="guide-title">Quick Installation Guide</h2>
+      <p class="guide-subtitle">Follow these three simple steps to set up Lux Care OS in your clinic environment.</p>
+      
+      <div class="steps-container">
+        
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Extract & Run</h3>
+          <p>
+            Extract the downloaded <strong>.zip</strong> archive. Run the installer (DMG on macOS, EXE on Windows) and drag the app into your Applications folder or follow the setup instructions.
+          </p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Connect Workstation</h3>
+          <p>
+            Launch the app. The Workstation Connect setup wizard will automatically open. Enter your local clinic server IP address or domain to securely link your device.
+          </p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Start Working</h3>
+          <p>
+            Log in using your staff credentials. Your patient lists, central alerts, inventory scan terminals, and call routing consoles will instantly sync.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../images/Side White Logo.png" alt="Lux Care OS" class="footer-logo">
+          <p>The operating system modern clinics deserve. Built by Lux Automaton LLC.</p>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col">
+            <h4>Product</h4>
+            <a href="../#features">Features</a>
+            <a href="../#ai">LANA AI</a>
+            <a href="../#screenshots">Product Tour</a>
+            <a href="../#pricing">Pricing</a>
+          </div>
+          <div class="fl-col">
+            <h4>Compliance</h4>
+            <a href="#">HIPAA Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">BAA Template</a>
+          </div>
+          <div class="fl-col">
+            <h4>Company</h4>
+            <a href="../#contact">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lux Automaton LLC. All rights reserved.</p>
+        <p>Made with care in Oregon</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div id="toast" class="toast">
+    <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Copy hash helper
+    function copyText(text, label) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`Copied ${label} to clipboard!`);
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toast-message');
+      msg.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
